@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Separator?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.pratc8.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Label для приветствия -->
+    <Label fx:id="welcomeText" text="Welcome to JavaFX Application!">
+        <font>
+            <Font size="20"/>
+        </font>
+    </Label>
+
+    <!-- Разделительная линия -->
+    <Separator/>
+
+    <!-- Компонент 1: Подсчет времени -->
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="Время работы:">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Label>
+        <Label fx:id="timeLabel" text="0 с">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Label>
+    </VBox>
+
+    <!-- Разделительная линия -->
+    <Separator/>
+
+    <!-- Компонент 2: Анимация -->
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="Анимация:">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Label>
+        <Rectangle fx:id="animationRectangle" width="50" height="50" fill="blue"/>
+    </VBox>
+
+    <!-- Разделительная линия -->
+    <Separator/>
+
+    <!-- Компонент 3: Музыкальный клип -->
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="Музыка:">
+            <font>
+                <Font size="16"/>
+            </font>
+        </Label>
+        <Button text="Start Music" onAction="#onStartMusicButtonClick"/>
+        <Button text="Stop Music" onAction="#onStopMusicButtonClick"/>
+    </VBox>
+
+    <!-- Разделительная линия -->
+    <Separator/>
+
+    <!-- Кнопка для запуска/остановки сервера времени -->
+    <Button text="Start/Stop Timer" onAction="#onStartStopButtonClick"/>
+</VBox>
